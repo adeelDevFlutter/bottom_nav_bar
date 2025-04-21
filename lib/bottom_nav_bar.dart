@@ -92,61 +92,172 @@ class _BottomNavBarState extends State<BottomNavBar> {
         showUnselectedLabels: true,
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: ColorFiltered(
-              colorFilter: ColorFilter.mode(
-                _selectedIndex == 0 ? Colors.blue : Colors.black,
-                BlendMode.srcIn,
-              ),
-              child: Image.asset(
-                'assets/icons/home-2.png',
-                height: 24,
-                width: 24,
-              ),
+            icon: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                // Top bar indicator
+                Container(
+                  height: 4,
+                  width: 50,
+                  decoration: BoxDecoration(
+                    color: _selectedIndex == 0
+                        ? const Color(0xff007BFF)
+                        : Colors.transparent,
+                    borderRadius: BorderRadius.only(
+                        bottomLeft: Radius.circular(10),
+                        bottomRight: Radius.circular(10)),
+                  ),
+                ),
+                const SizedBox(height: 4),
+                // Icon itself
+                ColorFiltered(
+                  colorFilter: ColorFilter.mode(
+                    _selectedIndex == 0 ? Colors.blue : Colors.black,
+                    BlendMode.srcIn,
+                  ),
+                  child: Image.asset('assets/icons/home-2.png',
+                      height: 24, width: 24),
+                ),
+              ],
             ),
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: ColorFiltered(
-              colorFilter: ColorFilter.mode(
-                _selectedIndex == 1 ? Colors.blue : Colors.black,
-                BlendMode.srcIn,
-              ),
-              child: Image.asset(
-                'assets/icons/shop.png',
-                height: 24,
-                width: 24,
-              ),
+            icon: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                // Top bar indicator
+                Container(
+                  height: 4,
+                  width: 50,
+                  decoration: BoxDecoration(
+                    color: _selectedIndex == 1
+                        ? const Color(0xff007BFF)
+                        : Colors.transparent,
+                    borderRadius: BorderRadius.only(
+                        bottomLeft: Radius.circular(10),
+                        bottomRight: Radius.circular(10)),
+                  ),
+                ),
+                const SizedBox(height: 4),
+                // Icon itself
+                ColorFiltered(
+                  colorFilter: ColorFilter.mode(
+                    _selectedIndex == 1 ? Colors.blue : Colors.black,
+                    BlendMode.srcIn,
+                  ),
+                  child: Image.asset('assets/icons/shop.png',
+                      height: 24, width: 24),
+                ),
+              ],
             ),
             label: 'Shop',
           ),
+          // BottomNavigationBarItem(
+          //   icon: ColorFiltered(
+          //     colorFilter: ColorFilter.mode(
+          //       _selectedIndex == 1 ? Colors.blue : Colors.black,
+          //       BlendMode.srcIn,
+          //     ),
+          //     child: Image.asset(
+          //       'assets/icons/shop.png',
+          //       height: 24,
+          //       width: 24,
+          //     ),
+          //   ),
+          //   label: 'Shop',
+          // ),
+
           BottomNavigationBarItem(
-            icon: ColorFiltered(
-              colorFilter: ColorFilter.mode(
-                _selectedIndex == 2 ? Colors.blue : Colors.black,
-                BlendMode.srcIn,
-              ),
-              child: Image.asset(
-                'assets/icons/search.png',
-                height: 24,
-                width: 24,
-              ),
+            icon: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                // Top bar indicator
+                Container(
+                  height: 4,
+                  width: 50,
+                  decoration: BoxDecoration(
+                    color: _selectedIndex == 2
+                        ? const Color(0xff007BFF)
+                        : Colors.transparent,
+                    borderRadius: BorderRadius.only(
+                        bottomLeft: Radius.circular(10),
+                        bottomRight: Radius.circular(10)),
+                  ),
+                ),
+                const SizedBox(height: 4),
+                // Icon itself
+                ColorFiltered(
+                  colorFilter: ColorFilter.mode(
+                    _selectedIndex == 2 ? Colors.blue : Colors.black,
+                    BlendMode.srcIn,
+                  ),
+                  child: Image.asset('assets/icons/search.png',
+                      height: 24, width: 24),
+                ),
+              ],
             ),
             label: 'Search',
           ),
+          // BottomNavigationBarItem(
+          //   icon: ColorFiltered(
+          //     colorFilter: ColorFilter.mode(
+          //       _selectedIndex == 2 ? Colors.blue : Colors.black,
+          //       BlendMode.srcIn,
+          //     ),
+          //     child: Image.asset(
+          //       'assets/icons/search.png',
+          //       height: 24,
+          //       width: 24,
+          //     ),
+          //   ),
+          //   label: 'Search',
+          // ),
           BottomNavigationBarItem(
-            icon: ColorFiltered(
-              colorFilter: ColorFilter.mode(
-                _selectedIndex == 3 ? Colors.blue : Colors.black,
-                BlendMode.srcIn,
-              ),
-              child: Image.asset(
-                'assets/icons/person.png',
-                height: 24,
-                width: 24,
-              ),
+            icon: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                // Top bar indicator
+                Container(
+                  height: 4,
+                  width: 50,
+                  decoration: BoxDecoration(
+                    color: _selectedIndex == 3
+                        ? const Color(0xff007BFF)
+                        : Colors.transparent,
+                    borderRadius: BorderRadius.only(
+                        bottomLeft: Radius.circular(10),
+                        bottomRight: Radius.circular(10)),
+                  ),
+                ),
+                const SizedBox(height: 4),
+                // Icon itself
+                ColorFiltered(
+                  colorFilter: ColorFilter.mode(
+                    _selectedIndex == 3 ? Colors.blue : Colors.black,
+                    BlendMode.srcIn,
+                  ),
+                  child: Image.asset('assets/icons/person.png',
+                      height: 24, width: 24),
+                ),
+              ],
             ),
-            label: 'Profile',
+            label: 'Proflie',
           ),
+          // BottomNavigationBarItem(
+          //   icon: ColorFiltered(
+          //     colorFilter: ColorFilter.mode(
+          //       _selectedIndex == 3 ? Colors.blue : Colors.black,
+          //       BlendMode.srcIn,
+          //     ),
+          //     child: Image.asset(
+          //       'assets/icons/person.png',
+          //       height: 24,
+          //       width: 24,
+          //     ),
+          //   ),
+          //   label: 'Profile',
+          // ),
         ],
       ),
     );
